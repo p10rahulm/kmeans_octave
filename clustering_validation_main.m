@@ -12,7 +12,8 @@ c3  = clustering_3(:,2);
 c4  = clustering_4(:,2);
 c5  = clustering_5(:,2);
 truth = partitions(:,2);
-get_joint_freq_table(c1,truth)
+
+truth_table = get_joint_freq_table(c1,truth)
 
 endfunction
 
