@@ -5,5 +5,4 @@ function output_array_to_file(arr,outputfile_path)
       fprintf(mfile, '\n');
   end
   fclose(mfile);
-  %save closest_cluster.txt outputformat;
 endfunction

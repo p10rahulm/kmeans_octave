@@ -11,8 +11,6 @@ function coefficient = jaccard_coefficient(truth_table)
       endif
     endfor
   endfor
-  %disp('TP');
-  %disp(TP);
   FP = 0;
   for i =1:length(cluster_sum)
     num_cluster = cluster_sum(i);
@@ -21,9 +19,7 @@ function coefficient = jaccard_coefficient(truth_table)
     endif
   endfor
   FP = FP - TP;
-  %disp('FP');
-  %disp(FP);
-  
+ 
   FN = 0;
   for i =1:length(truth_sum)
     num_partition = truth_sum(i);
@@ -32,8 +28,6 @@ function coefficient = jaccard_coefficient(truth_table)
     endif
   endfor
   FN = FN - TP;
-  %disp('FN');
-  %disp(FN);
   jaccard = TP/(TP+FP+FN);
   disp(jaccard)
   coefficient = jaccard;
